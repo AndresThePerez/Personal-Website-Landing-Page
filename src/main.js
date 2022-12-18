@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify';
@@ -11,14 +11,12 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 import './assets/scss/main.scss'
 
-Vue.config.productionTip = false;
-Vue.use(VueParticles);
-Vue.use(CoolLightBox);
-Vue.use(VueScrollactive);
+const app = createApp(App)
+
+app.config.productionTip = false;
+app.use(VueParticles);
+app.use(CoolLightBox);
+app.use(VueScrollactive);
 
 
-new Vue({
-    router,
-    vuetify,
-    render: h => h(App)
-}).$mount('#app')
+app.mount('#app')

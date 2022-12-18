@@ -92,7 +92,7 @@
 
 <script>
   import { ValidationObserver } from "vee-validate";
-  import { ValidationProvider } from "vee-validate/dist/vee-validate.full.esm";
+  import { ValidationProvider } from "vee-validate/dist/vee-validate.esm.js";
   export default {
     components: {
       ValidationObserver,
